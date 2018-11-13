@@ -37,9 +37,9 @@ wei.speed(0)
 wei.up()
 
 
-tur=[shui,di,huo,mu,tu,jin]
-po=[500,1000,480,1700,1900,750]
-eo=[10,12,5,13,10,11]
+tur=[shui,jin,di,huo,mu,tu]
+po=[500,750,1000,480,1700,1900]
+eo=[10,11,12,5,13,10]
 
 
 for xingxin in range(6):
@@ -60,15 +60,6 @@ for xingxin in range(6):
 
         
 for i in range(1000):
-    pjin=750
-    ejin=11
-    jiaojin=10*(-i)*(3.14159/180)/3
-    changjin=pjin/(ejin-math.cos(jiaojin))
-    ajin=changjin*math.cos(jiaojin)
-    bjin=changjin*math.sin(jiaojin)
-    jin.goto(ajin,bjin)
-    
-        
     ptu=1900
     etu=10
     jiaotu=10*(i)*(3.14159/180)/6
@@ -83,7 +74,7 @@ for i in range(1000):
         wei.goto(awei,bwei)
     
 
-    for xingxin in range(4):
+    for xingxin in range(5):
         xin=tur[xingxin]
         xin.shape("circle")
         xin.speed(0)

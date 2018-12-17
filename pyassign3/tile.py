@@ -81,11 +81,13 @@ def shibie(wall,x,y):
                 return[['Note']]
 
 def final_methods(wall,x,y):
-    #对shibie得到的粗列表筛选出未标记的
+    #对shibie得到的粗列表筛选出未标记的，并且输出有多少种方法
+    n=0
     new_list=[]
     for i in shibie(wall,x,y):
         if 'Note' not in str(i):
             new_list.append(i)
+    print("有",n,"种方法")
     return new_list
 
 def output(m,n,x,y):

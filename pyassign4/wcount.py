@@ -6,7 +6,7 @@ __pkuid__  = "1800011822"
 __email__  = "1800011822@pku.edu.cn"
 """
 
-import sys, functools, string, urllib.error
+import sys, string, urllib.error
 from urllib.request import urlopen
 
 def record(a_line):
@@ -42,11 +42,8 @@ def wcount(lines, topn = 10):
                       key=lambda x:x[1],reverse = True)
     #将word_dict排序
     
-    print(' '*3+'Word'.ljust(30),'Times'.center(10))
     for num in range(min(len(word_list),topn)):
-        print(' '*3+word_list[num][0].ljust(30),\
-              str(word_list[num][1]).center(10))
-    #如果词不够就全输出来
+        print(word_list[num][0].ljust(20),str(word_list[num][1]))
     
 if __name__ == '__main__':
     if  len(sys.argv) == 1 or len(sys.argv) > 3:

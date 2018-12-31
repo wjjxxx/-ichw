@@ -38,10 +38,8 @@ def wcount(lines, topn = 10):
         str_line = lines.readline().decode()
     #一行一行记录单词
     
-    def last(b):
-        return b[1]
     word_list = sorted(word_dict.items(),\
-                      key=lambda last(x),reverse = True)
+                      key=lambda x:x[1],reverse = True)
     #将word_dict排序
     
     print(' '*3+'Word'.ljust(30),'Times'.center(10))
